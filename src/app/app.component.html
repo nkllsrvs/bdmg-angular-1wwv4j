@@ -3,3 +3,123 @@
 <br />
 
 <div>Escreva seu código HTML abaixo:</div>
+<div>
+  <div class="form-container">
+    <form class="form" (ngSubmit)="submitForm()" #form="ngForm">
+      <div class="input-container">
+        <mat-form-field appearance="fill" class="col-12 col-sm-6">
+          <mat-label>CEP</mat-label>
+          <input
+            matInput
+            type="text"
+            mask="00000-000"
+            [(ngModel)]="addressDTO.cep"
+            name="cep"
+            (ngModelChange)="getInfoViaCEP()"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Logradouro</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="addressDTO.logradouro"
+            name="logradouro"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Complemento:</mat-label>
+          <input
+            matInput
+            type="text"
+            mask="0.000"
+            [(ngModel)]="addressDTO.complemento"
+            name="complemento"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Bairro:</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="addressDTO.bairro"
+            name="bairro"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Localidade:</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="addressDTO.localidade"
+            name="localidade"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>UF:</mat-label>
+          <input
+            matInput
+            type="text"
+            mask="AA"
+            [(ngModel)]="addressDTO.uf"
+            name="uf"
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>IBGE:</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="addressDTO.ibge"
+            name="ibge"
+            readonly
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>GIA:</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="addressDTO.gia"
+            name="gia"
+            readonly
+          />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>DDD:</mat-label>
+          <input matInput type="text" [(ngModel)]="addressDTO.ddd" name="ddd" />
+        </mat-form-field>
+      </div>
+      <div class="input-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Siafi:</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="addressDTO.siafi"
+            name="siafi"
+          />
+        </mat-form-field>
+      </div>
+      <div class="container-button">
+        <button mat-flat-button color="primary" type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
